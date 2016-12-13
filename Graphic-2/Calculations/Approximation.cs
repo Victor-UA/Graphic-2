@@ -209,8 +209,8 @@ namespace Graphic_2.Calculations
         private void writeResults2Files()
         {
             string resultPath = Path.Combine(GlobalVariables.resultPath, folder.Replace("C", ""));
-            string resultPathH = Path.Combine(GlobalVariables.resultPath, folder.Replace("C", ""));
-            string resultFile = Path.Combine(GlobalVariables.resultPath, file.Substring(path.Length).Replace("C", ""));
+            //string resultPathH = Path.Combine(GlobalVariables.resultPath, folder.Replace("C", ""));
+            string resultFile = Path.Combine(resultPath, file.Substring(path.Length + 1).Replace("C", ""));
             Directory.CreateDirectory(resultPath);
             try
             {
@@ -219,7 +219,7 @@ namespace Graphic_2.Calculations
             catch (Exception ex)
             {
                 log.Add("Помилка збереження результатів до " + resultFile + '\n' + ex.Message + '\n' + ex.StackTrace);
-                MessageBox.Show("Помилка збереження результатів до " + resultFile + '\n' + ex.Message + '\n' + GlobalVariables.resultPath);
+                MessageBox.Show("Помилка збереження результатів до " + resultFile + '\n' + ex.Message);
             }
         }
 
