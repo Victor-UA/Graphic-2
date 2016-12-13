@@ -435,7 +435,7 @@ namespace Graphic_2
                 }
 
             }
-            catch (ThreadAbortException ex) { }
+            catch (ThreadAbortException) { }
             catch (Exception ex)
             {
                 write2LogFile("Помилка у потоці " + Thread.CurrentThread.Name + '\n' + ex.Message);
@@ -508,7 +508,7 @@ namespace Graphic_2
                     {
                         File.AppendAllLines(logFileName, Log);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                     }
@@ -524,7 +524,7 @@ namespace Graphic_2
                     {
                         File.AppendAllText(logFileName, Log + '\n');
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                     }

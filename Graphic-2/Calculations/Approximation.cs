@@ -158,7 +158,7 @@ namespace Graphic_2.Calculations
                         resultH.RemoveAt(0);
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     { }
                 }

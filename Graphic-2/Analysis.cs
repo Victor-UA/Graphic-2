@@ -79,7 +79,7 @@ namespace Graphic_2
                 }
                 isCanceled = true;
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
         public void Cancel(string text)
         {
@@ -116,7 +116,7 @@ namespace Graphic_2
                     mainForm.write2LogFile(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + ' ' + "Теку результатів видалено\n");
                 }
             }
-            catch(DirectoryNotFoundException ex) { }
+            catch(DirectoryNotFoundException) { }
             catch(Exception ex)
             {
                 mainForm.write2LogFile("Помилка під час видалення теки результатів\n" + ex.Message + '\n' + ex.StackTrace);

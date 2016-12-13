@@ -235,7 +235,7 @@ namespace Graphic_2
                     backgroundWorker1.RunWorkerAsync();
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception) { }
         }
 
         private void button_Cancel_Click(object sender, EventArgs e)
@@ -332,7 +332,7 @@ namespace Graphic_2
                     {
                         File.AppendAllLines(logFileName, Log);
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                     }
@@ -349,7 +349,7 @@ namespace Graphic_2
                     {
                         File.AppendAllText(logFileName, Log + '\n');
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                     }
