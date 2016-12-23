@@ -57,7 +57,7 @@ namespace Graphic_2
                     }
                     else
                     {
-                        //Різниця між відомим і граничним індексомдостатня для проходу перебором
+                        //Різниця між відомим і граничним індексом, достатня для проходу перебором
                         if (minIndexFileNotExists - i <= iterateDelta)
                         {
                             for (int n = i; n < minIndexFileNotExists; n++)
